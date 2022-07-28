@@ -17,6 +17,7 @@ ipAddr=$(hostname -I)
 macAddr=$(ip link show | awk '$1 == "link/ether" {print $2}')
 sudoNumbs=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
 
+
 wall "
 	Architecture   $arch
 	CPU physical   $pcpu
